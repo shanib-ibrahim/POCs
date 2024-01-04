@@ -1,2 +1,2 @@
 # POCs
-# Sample Applications
+Sample Applications
