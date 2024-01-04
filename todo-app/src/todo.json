@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Reading NextJS Documentation",
+      "status": true
+    },
+    {
+      "id": 2,
+      "text": "Trying out different concept in next.js",
+      "status": false
+    },
+    {
+      "id": 3,
+      "text": "Read book 0.5 hours",
+      "status": true
+    },
+    {
+      "id": 4,
+      "text": "Workout 1hour",
+      "status": false
+    }
+  ]
+}
