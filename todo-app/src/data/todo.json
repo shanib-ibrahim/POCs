@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "text": "Trying out different concept in next.js",
+      "text": "Testing edit function",
       "status": false
     },
     {
@@ -19,6 +19,11 @@
       "id": 4,
       "text": "Workout 1hour",
       "status": false
+    },
+    {
+      "id": 5,
+      "text": "Reading NextJS Documentation",
+      "status": true
     }
   ]
 }
