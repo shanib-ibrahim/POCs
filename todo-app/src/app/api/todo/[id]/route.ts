@@ -19,12 +19,16 @@ export const DELETE = async (
   const data = {
     tasks: todo.tasks.filter((task) => task.id !== Number(params.id)),
   };
-  await fs.writeFile("./src/todo.json", JSON.stringify(data), (err) => {
-    if (err) {
-      msg = "Error in deleting the tasks :" + err;
-      status = 500;
+  await fs.writeFile(
+    "./src/data/todo.json",
+    JSON.stringify(data, null, 2),
+    (err) => {
+      if (err) {
+        msg = "Error in deleting the tasks :" + err;
+        status = 500;
+      }
     }
-  });
+  );
   return NextResponse.json(msg, { status });
 };
 

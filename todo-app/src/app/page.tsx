@@ -1,15 +1,16 @@
-"use client";
 import AddTask from "@/components/AddTask";
 import TodoList from "@/components/TodoList";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 
-export default function Home() {
+const baseUrl = "http://localhost:3000";
+
+export default async function Home() {
+  const res = await fetch(`${baseUrl}/api/todo`, { cache: "no-store" });
+  const tasks = await res.json();
   return (
     <main>
       <div className="my-5">
-        <AddTask />
-        <TodoList />
+        <AddTask tasks={tasks} />
+        <TodoList tasks={tasks} />
       </div>
     </main>
   );

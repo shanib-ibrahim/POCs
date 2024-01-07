@@ -11,11 +11,11 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
     <div
       className={`fixed inset-0 flex justify-center items-start p-[150px] transition-colors ${
         open ? "visible bg-black/20" : "invisible"
-      }  `}
+      } text-black z-10`}
       onClick={onClose}
     >
       <div
-        className={`bg-white rounded-lg shadow p-6 transition-all max-w-md ${
+        className={`bg-white rounded-lg shadow p-10 transition-all max-w-md ${
           open ? "scale-100 opacity-100" : "scale-110 opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}
