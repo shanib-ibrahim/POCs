@@ -1,29 +1,29 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Reading NextJS Documentation",
-      "status": true
-    },
-    {
-      "id": 2,
-      "text": "Testing edit function",
+      "id": "b765d34b-c7ee-46e4-b6b9-fbcb6d9e3a32",
+      "text": "Woke Up @ 5AM",
       "status": false
     },
     {
-      "id": 3,
-      "text": "Read book 0.5 hours",
-      "status": true
-    },
-    {
-      "id": 4,
-      "text": "Workout 1hour",
+      "id": "7d8c68b3-e9b7-4c67-8a84-9f747e786a57",
+      "text": "Daily 5 times prayer",
       "status": false
     },
     {
-      "id": 5,
-      "text": "Reading NextJS Documentation",
-      "status": true
+      "id": "c6e2a114-e4af-465e-b107-b0133b744a06",
+      "text": "Daily 1hour workout",
+      "status": false
+    },
+    {
+      "id": "1abdc123-cfc6-4246-954f-42ec3d91bd0a",
+      "text": "Daily Github Contributions",
+      "status": false
+    },
+    {
+      "id": "10034a84-e42f-437a-8eed-ef6c338c6fe3",
+      "text": "Seek Knowledge",
+      "status": false
     }
   ]
 }

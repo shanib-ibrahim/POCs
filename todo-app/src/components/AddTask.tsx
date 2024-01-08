@@ -4,6 +4,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import Modal from "./Modal";
 import { FormEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
+import { v4 as uuidv4 } from "uuid";
 
 const baseUrl = "http://localhost:3000";
 
@@ -25,7 +26,7 @@ const AddTask: React.FC<TaskProps> = ({ tasks }) => {
   const handleSubmitNewTodo: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     const data = {
-      id: tasks.length + 1,
+      id: uuidv4(),
       text: newTaskValue,
       status: false,
     };
