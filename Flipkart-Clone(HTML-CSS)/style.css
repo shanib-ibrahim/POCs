@@ -167,3 +167,13 @@ body {
   background-color: #fff;
   height: 344px;
 }
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+.main-header i {
+  color: #1c41d6;
+  font-size: 1.5rem;
+}
