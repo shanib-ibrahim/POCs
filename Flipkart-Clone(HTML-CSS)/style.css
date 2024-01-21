@@ -177,3 +177,8 @@ body {
   color: #1c41d3;
   font-size: 1.5rem;
 }
+.main-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
