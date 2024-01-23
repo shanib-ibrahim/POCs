@@ -185,3 +185,8 @@ body {
 .main-items img {
   width: 150px;
 }
+.main-toys {
+  background-color: #fff;
+  height: 344px;
+  margin-top: 20px;
+}
