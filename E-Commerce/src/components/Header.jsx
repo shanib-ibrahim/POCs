@@ -28,7 +28,7 @@ const Header = () => {
     <header>
       {/* header first-part */}
       <div className="p-5 flex justify-between">
-        <div className="flex gap-2 border-none ml-20 text-xl ">
+        <div className="flex gap-2 border-none ml-20 text-xl xxl:text-lg xl:text-md lg:text-[1rem]">
           <select
             className="bg-transparent cursor-pointer"
             name="language"
@@ -46,7 +46,7 @@ const Header = () => {
             <option value="AED">AED</option>
           </select>
         </div>
-        <div className="flex justify-evenly items-center gap-10 mr-40 text-xl">
+        <div className="flex justify-evenly items-center gap-10 mr-40 xxl:mr-30 xl:mr-20 lg:mr-20 text-xl xxl:text-lg xl:text-md lg:text-[1rem]">
           <div className="flex justify-center items-center gap-2 cursor-pointer">
             <FaRegUser />
             <span>My Profile</span>{" "}
@@ -73,12 +73,14 @@ const Header = () => {
       </div>
       <hr />
       {/* header second-part */}
-      <div className="flex justify-between p-10 pr-40">
+      <div className="flex justify-between items-center p-10 pr-40 xxl:pr-30 xl:pr-20 lg:pr-30">
         <div className="flex justify-center items-center gap-2 ml-10">
           <img src="./images/logo.png" alt="logo" />
-          <span className="text-xl font-bold">E-Comm</span>
+          <span className="text-xl font-bold xxl:text-lg xl:text-[1.2rem] lg:text-[1rem]">
+            E-Comm
+          </span>
         </div>
-        <ul className="flex gap-[100px] text-2xl font-medium ">
+        <ul className="flex gap-[8rem] xxl:gap-[6rem] xl:gap-[4rem] lg:gap-[2rem]  text-2xl font-medium xxl:text-xl xl:text-md lg:text-[1rem]">
           <li
             className={`${
               !breadcrumbs.length || breadcrumbs[0] === "cart"

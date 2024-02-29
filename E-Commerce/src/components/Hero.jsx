@@ -1,15 +1,14 @@
 const Hero = () => {
   return (
     <div
-      className="relative bg-cover bg-no-repeat "
+      className="relative bg-contain bg-no-repeat h-[800px] lg:h-[600px]"
       style={{
         "background-image": `url(
           ./images/offer-banner.png
         )`,
-        height: "800px",
       }}
     >
-      <div className="absolute bottom-[280px] left-[260px] text-7xl font-bold text-white">
+      <div className="absolute bottom-[280px] left-[260px] text-7xl lg:text-6xl xl:text-6xl lg:left-[80px] lg:bottom-[220px] xl:left-[120px] xl:bottom-[380px] font-bold text-white">
         <p className="mb-6">Super Flash Sale</p>
         <p>50% Off</p>
       </div>

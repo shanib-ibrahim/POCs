@@ -4,20 +4,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <footer className="bg-[#BCDDFE]">
-      <div className="flex flex-col w-full pt-[180px] pb-10 ">
-        <div className="flex ml-[185px]  gap-80 mb-10">
-          <div className="w-[260px] ">
+      <div className="flex flex-col w-full pt-[180px] lg:pt-[8rem] pb-10 ">
+        <div className="flex ml-[11.563rem] lg:ml-[6.8rem] xl:ml-[7.8rem] xl:gap-[15rem] gap-80 lg:gap-40 mb-10">
+          <div className="w-[16.25rem] ">
             <div className="flex justify-start items-center gap-2">
               <img src="./images/logo.png" alt="logo" />
               <span className="text-xl font-bold">E-Comm</span>
             </div>
-            <p className="mt-2 font-light text-sm">
+            <p className="mt-2 font-light text-sm lg:text-[0.8rem]">
               Lorem ipsum is simply dummy text of the printing and typesetting
               industry.Lorem Ipsum has been the industry's standard dummy text
               ever.Since the 1500s, when an unknown printer.
             </p>
           </div>
-          <div className="md:mr-12 mb-4 md:mb-0 w-[250px] text-sm ">
+          <div className="md:mr-12 mb-4 md:mb-0 w-[250px] text-sm  lg:text-[0.8rem]">
             <h4 className="text-lg mb-4">Follow Us</h4>
             <p className="mt-2 font-light text-sm">
               Since the 1500s when an unknown printer took a galley of type and
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div className="w-40">
             <h4 className="text-lg mb-4">Contact Us</h4>
-            <p className="mt-2 font-light">
+            <p className="mt-2 font-light lg:text-[0.8rem]">
               E-comm: 4578 Marmora Road, Glasgow D04 89GR
             </p>
           </div>

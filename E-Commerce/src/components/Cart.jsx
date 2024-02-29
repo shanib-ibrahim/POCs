@@ -37,7 +37,7 @@ const Cart = () => {
   };
 
   return !carts.length ? (
-    <div className="flex flex-col justify-center items-center w-100 h-[600px] my-5 text-center text-2xl text-danger">
+    <div className="flex flex-col justify-center items-center w-100 h-[600px] my-5 text-center text-2xl lg:text-xl text-danger">
       <h3 className="mb-5">
         <span className="mb-5">
           You don't have any products in your cart.
@@ -55,32 +55,32 @@ const Cart = () => {
     </div>
   ) : (
     <div className="container mx-auto px-4 sm:px-8">
-      <div className="my-20 mx-40">
+      <div className="my-20 mx-40 lg:mx-20 xl:mx-[6rem]">
         <table className="w-[100%]">
           <thead>
             <tr>
               <th className="border-b border-gray-200"></th>
               <th
                 scope="col"
-                className="w-[50%] px-6 py-3 text-xl font-mono text-left font-medium  uppercase tracking-wider border-b border-gray-200"
+                className="w-[50%] px-6 py-3 text-xl lg:text-lg font-mono text-left font-medium  uppercase tracking-wider border-b border-gray-200"
               >
                 Product
               </th>
               <th
                 scope="col"
-                className="w-[10%] px-6 py-3 text-xl font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
+                className="w-[10%] px-6 py-3 text-xl lg:text-lg  font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
               >
                 Price
               </th>
               <th
                 scope="col"
-                className="w-[20%] px-6 py-3 text-xl font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
+                className="w-[20%] px-6 py-3 text-xl lg:text-lg  font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
               >
                 Qty
               </th>
               <th
                 scope="col"
-                className="w-[20%] px-6 py-3 text-xl font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
+                className="w-[20%] px-6 py-3 text-xl lg:text-lg  font-mono text-left font-medium uppercase tracking-wider border-b border-gray-200"
               >
                 Unit Price
               </th>
@@ -98,39 +98,45 @@ const Cart = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex justify-between my-20 mx-40 mr-[280px]">
-        <div className="relative w-[400px] h-[60px] overflow-hidden mb-2.5 border-[3px] border-solid border-[#F1F3F4] rounded">
+      <div className="flex justify-between my-20 mx-40 xl:mx-[6rem] mr-[280px] xl:mr-[8rem]">
+        <div className="relative w-[400px] xl:w-[22rem] lg:w-[20rem] h-[60px] overflow-hidden mb-2.5 border-[3px] border-solid border-[#F1F3F4] rounded">
           <input
             type="text"
             placeholder="Voucher Code"
-            className="h-11 w-3/5 leading-[30px] text-xl ml-5 m-[3px] p-0 border-[none] focus:outline-none"
+            className="h-11 w-3/5 leading-[30px] text-xl xl:text-lg ml-5 m-[3px] p-0 border-[none] focus:outline-none"
           />
           <button
             value="Save"
             className="flex cursor-pointer items-center justify-center rounded absolute h-[60px] leading-[50px] text-[#FFFFFF] w-[35%] font-[bold] m-0 p-0 border-[none] right-0 top-0 hover:text-[#3c4a57] hover:cursor-pointer bg-[#40BFFF]"
           >
-            <span className="text-xl font-mono">Redeem</span>
+            <span className="text-xl xl:text-lg font-mono">Redeem</span>
           </button>
         </div>
         <div className="flex flex-col justify-evenly w-[400px] h-[350px] p-10 ">
           <div className="flex justify-between">
-            <span className="text-lg">Subtotal</span>
-            <span className="text-lg">{formatCurrency(subTotal)}</span>
+            <span className="text-lg xl:text-[1.2rem]">Subtotal</span>
+            <span className="text-lg xl:text-[1.2rem]">
+              {formatCurrency(subTotal)}
+            </span>
           </div>
           <div className="flex justify-between mt-4">
-            <span className="text-lg">Shipping fee</span>
-            <span className="text-lg">{formatCurrency(shippingPrice)}</span>
+            <span className="text-lg xl:text-[1.2rem]">Shipping fee</span>
+            <span className="text-lg xl:text-[1.2rem]">
+              {formatCurrency(shippingPrice)}
+            </span>
           </div>
           <div className="flex justify-between mt-4">
-            <span className="text-lg">Coupon</span>
-            <span className="text-lg">No</span>
+            <span className="text-lg xl:text-[1.2rem]">Coupon</span>
+            <span className="text-lg xl:text-[1.2rem]">No</span>
           </div>
           <hr className="mt-5" />
           <div className="flex justify-between mt-10 font-semibold font-mono">
-            <span className="text-2xl">TOTAL</span>
-            <span className="text-2xl">{formatCurrency(totalAmmount)}</span>
+            <span className="text-2xl lg:text-[1.5rem]">TOTAL</span>
+            <span className="text-2xl lg:text-[1.5rem]">
+              {formatCurrency(totalAmmount)}
+            </span>
           </div>
-          <button className="flex cursor-pointer items-center mt-3 rounded justify-center w-full h-[50px] text-[#FFFFFF] font-[bold] bg-[#40BFFF] hover:text-[#3c4a57] hover:cursor-pointer">
+          <button className="flex cursor-pointer items-center mt-3 rounded justify-center w-full h-[50px] lg:h-[45px] text-[#FFFFFF] font-[bold] bg-[#40BFFF] hover:text-[#3c4a57] hover:cursor-pointer">
             <span className="text-xl font-mono">Check out</span>
           </button>
         </div>
