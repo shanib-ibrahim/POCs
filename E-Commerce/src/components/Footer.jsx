@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="md:mr-12 mb-4 md:mb-0 w-[250px] text-sm ">
             <h4 className="text-lg mb-4">Follow Us</h4>
-            <p className="mt-2">
+            <p className="mt-2 font-light text-sm">
               Since the 1500s when an unknown printer took a galley of type and
               scrambled.
             </p>
