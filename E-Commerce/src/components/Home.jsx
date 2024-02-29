@@ -48,7 +48,7 @@ const Home = () => {
     <>
       <main>
         <Hero />
-        <div className="flex flex-col items-center mt-60 xl:mt-20 lg:mt-[160px]">
+        <div className="flex flex-col items-center mt-20 xl:mt-5 lg:mt-[160px]">
           <div className="text-4xl lg:text-3xl font-medium mb-5">
             <h1>BEST SELLER</h1>
           </div>
