@@ -19,7 +19,7 @@ const Breadcrumbs = () => {
 
   return (
     <div className="flex justify-center items-center text-xl w-full h-[50px] bg-[#FBFBFB]">
-      <Link to={"/POCs/"}>
+      <Link to={"/"}>
         <span className="text-[#40BFFF]">Home</span>
       </Link>
       {Breadcrumbs}

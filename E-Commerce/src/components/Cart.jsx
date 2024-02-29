@@ -7,6 +7,8 @@ import {
 } from "../store/Cart/CartSelector";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
   let state = useSelector((state) => state);
@@ -14,6 +16,16 @@ const Cart = () => {
   const subTotal = subTotalPrice(state);
   const shippingPrice = shippingFee(state);
   const totalAmmount = totalPrice(state);
+
+  const notify = () =>
+    toast.success("Item added to cart successfully !", {
+      position: "top-right",
+    });
+
+  const removeNotify = () =>
+    toast.error("Item successfully removed from cart !", {
+      position: "top-right",
+    });
 
   const formatCurrency = (currency) => {
     const num = parseFloat(currency);
@@ -25,15 +37,17 @@ const Cart = () => {
   };
 
   return !carts.length ? (
-    <div className="flex justify-center items-center w-100 h-[600px] my-5 text-center text-2xl text-danger">
-      <h3>
-        <span>
+    <div className="flex flex-col justify-center items-center w-100 h-[600px] my-5 text-center text-2xl text-danger">
+      <h3 className="mb-5">
+        <span className="mb-5">
           You don't have any products in your cart.
           <br />
         </span>
+      </h3>
+      <h3>
         <Link
-          to="/POCs/"
-          className="text-dark text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          to="/"
+          className="text-dark cursor-pointer text-white hover:text-[#3c4a57] bg-[#40BFFF] hover:ring-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 "
         >
           <span>Go for shoping</span>
         </Link>
@@ -74,7 +88,12 @@ const Cart = () => {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {carts.map((cart) => (
-              <CartItem key={cart.id} cart={cart} />
+              <CartItem
+                key={cart.id}
+                cart={cart}
+                notify={notify}
+                removeNotify={removeNotify}
+              />
             ))}
           </tbody>
         </table>
@@ -88,7 +107,7 @@ const Cart = () => {
           />
           <button
             value="Save"
-            className="flex items-center justify-center rounded absolute h-[60px] leading-[50px] text-[#FFFFFF] w-[35%] font-[bold] m-0 p-0 border-[none] right-0 top-0 hover:text-[#3c4a57] hover:cursor-pointer bg-[#33A0FF]"
+            className="flex cursor-pointer items-center justify-center rounded absolute h-[60px] leading-[50px] text-[#FFFFFF] w-[35%] font-[bold] m-0 p-0 border-[none] right-0 top-0 hover:text-[#3c4a57] hover:cursor-pointer bg-[#40BFFF]"
           >
             <span className="text-xl font-mono">Redeem</span>
           </button>
@@ -111,11 +130,12 @@ const Cart = () => {
             <span className="text-2xl">TOTAL</span>
             <span className="text-2xl">{formatCurrency(totalAmmount)}</span>
           </div>
-          <button className="flex items-center mt-3 rounded justify-center w-full h-[50px] text-[#FFFFFF] font-[bold] bg-[#33A0FF] hover:text-[#3c4a57] hover:cursor-pointer">
+          <button className="flex cursor-pointer items-center mt-3 rounded justify-center w-full h-[50px] text-[#FFFFFF] font-[bold] bg-[#40BFFF] hover:text-[#3c4a57] hover:cursor-pointer">
             <span className="text-xl font-mono">Check out</span>
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

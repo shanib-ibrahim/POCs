@@ -28,23 +28,31 @@ const Header = () => {
     <header>
       {/* header first-part */}
       <div className="p-5 flex justify-between">
-        <div className="flex gap-2 border-none ml-20 text-xl">
-          <select className="bg-transparent" name="language" id="language">
+        <div className="flex gap-2 border-none ml-20 text-xl ">
+          <select
+            className="bg-transparent cursor-pointer"
+            name="language"
+            id="language"
+          >
             <option value="english">EN</option>
             <option value="arabic">AR</option>
           </select>
-          <select className="bg-transparent" name="currency" id="currency">
+          <select
+            className="bg-transparent cursor-pointer"
+            name="currency"
+            id="currency"
+          >
             <option value="USD">USD</option>
             <option value="AED">AED</option>
           </select>
         </div>
         <div className="flex justify-evenly items-center gap-10 mr-40 text-xl">
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-2 cursor-pointer">
             <FaRegUser />
             <span>My Profile</span>{" "}
           </div>
-          <div className="relative">
-            <Link to="/POCs/cart">
+          <div className="relative cursor-pointer">
+            <Link to="/cart">
               <BsCart2 size={24} />
               <span
                 className="absolute -top-1.5 -right-2 bg-[#FB7181] w-4 h-4 rounded-full  
@@ -56,8 +64,8 @@ const Header = () => {
               </span>
             </Link>
           </div>
-          <div>Items</div>
-          <div className="flex gap-2 items-center">
+          <div className="cursor-pointer">Items</div>
+          <div className="flex gap-2 items-center cursor-pointer">
             <span className="text-[#939393]">$0.00</span>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
@@ -67,7 +75,7 @@ const Header = () => {
       {/* header second-part */}
       <div className="flex justify-between p-10 pr-40">
         <div className="flex justify-center items-center gap-2 ml-10">
-          <img src="/POCs/images/logo.png" alt="logo" />
+          <img src="./images/logo.png" alt="logo" />
           <span className="text-xl font-bold">E-Comm</span>
         </div>
         <ul className="flex gap-[100px] text-2xl font-medium ">
@@ -78,7 +86,7 @@ const Header = () => {
                 : ""
             } hover:text-[#40BFFF]`}
           >
-            <Link to="/POCs/">HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           {categories &&
             categories
@@ -94,7 +102,7 @@ const Header = () => {
                       : ""
                   }  hover:text-[#40BFFF]`}
                 >
-                  <Link to={`/POCs/category/${category}`}>
+                  <Link to={`/category/${category}`}>
                     {category.toUpperCase()}
                   </Link>
                 </li>
@@ -106,7 +114,7 @@ const Header = () => {
                 : ""
             } hover:text-[#40BFFF]`}
           >
-            <Link to="/POCs/contact">CONTACT</Link>
+            <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
       </div>

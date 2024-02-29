@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const CartItem = ({ cart }) => {
+const CartItem = ({ cart, notify, removeNotify }) => {
   const [product, setProduct] = useState({});
 
   const dispatch = useDispatch();
@@ -18,16 +18,19 @@ const CartItem = ({ cart }) => {
   const increaseItemQuantity = (e) => {
     e.preventDefault();
     dispatch(increaseQuantity(cart));
+    notify();
   };
 
   const decreaseItemQunaity = (e) => {
     e.preventDefault();
     dispatch(decreaseQuantity(cart));
+    removeNotify();
   };
 
   const removeItem = (e) => {
     e.preventDefault();
     dispatch(removeFormCart(cart));
+    removeNotify();
   };
 
   useEffect(() => {
@@ -39,7 +42,10 @@ const CartItem = ({ cart }) => {
     <tr key={product.id}>
       <td>
         <div className="flex justify-center items-center bg-[#FFF7F8] rounded-full w-5 h-5">
-          <button onClick={(e) => removeItem(e)} className="text-[#FF4252]">
+          <button
+            onClick={(e) => removeItem(e)}
+            className="text-[#FF4252] cursor-pointer"
+          >
             <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
@@ -69,7 +75,7 @@ const CartItem = ({ cart }) => {
         <div className="flex items-center">
           <div className="flex justify-evenly items-center w-[120px] bg-gray-100 rounded">
             <button
-              className="p-2 ml-2 text-2xl text-[#33A0FF]  "
+              className="p-2 ml-2 text-2xl text-[#40BFFF] cursor-pointer  "
               onClick={decreaseItemQunaity}
             >
               -
@@ -81,7 +87,7 @@ const CartItem = ({ cart }) => {
               value={product.quantity}
             />
             <button
-              className="p-2 mr-2 text-2xl text-[#33A0FF] "
+              className="p-2 mr-2 text-2xl text-[#40BFFF] cursor-pointer"
               onClick={increaseItemQuantity}
             >
               +

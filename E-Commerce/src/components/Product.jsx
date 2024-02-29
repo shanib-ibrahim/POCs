@@ -5,6 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Product = (props) => {
   const product = props.product;
+  const showToastMessage = props.showToastMessage;
   const dispatch = useDispatch();
 
   const addToCart = (e) => {
@@ -15,6 +16,7 @@ const Product = (props) => {
       price: product.price,
     };
     dispatch(addToCarts(item));
+    showToastMessage();
   };
 
   console.log(product);
@@ -31,7 +33,7 @@ const Product = (props) => {
           <img className="h-40 w-40" src={product.image} alt={product.title} />
         </div>
         <div className="absolute flex  gap-2 justify-center items-center w-[90%] h-[80%] flex justify-center bg-[#FFFFFF] opacity-0 group-hover:opacity-[95%] duration-500">
-          <div className="flex justify-center items-center rounded-full h-10 w-10 border-solid border-2 border-[#F1F8FE] hover:bg-[#D9D9D9] border-[#33A0FF]">
+          <div className="flex  cursor-pointer justify-center items-center rounded-full h-10 w-10 border-solid border-2 border-[#F1F8FE] hover:bg-[#D9D9D9] border-[#33A0FF]">
             <CiHeart
               style={{
                 color: "#33A0FF",
@@ -41,7 +43,7 @@ const Product = (props) => {
             />
           </div>
           <div
-            className="flex justify-center items-center rounded-full h-10 w-10 border-solid border-2 border-[#F1F8FE] hover:bg-[#D9D9D9] border-[#33A0FF] "
+            className="flex cursor-pointer justify-center items-center rounded-full h-10 w-10 border-solid border-2 border-[#F1F8FE] hover:bg-[#D9D9D9] border-[#33A0FF] "
             onClick={(e) => addToCart(e)}
           >
             <IoCartOutline
