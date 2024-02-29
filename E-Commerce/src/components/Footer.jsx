@@ -1,4 +1,5 @@
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
@@ -6,7 +7,10 @@ const Footer = () => {
       <div className="flex flex-col w-full pt-[180px] pb-10 ">
         <div className="flex ml-[185px]  gap-80 mb-10">
           <div className="w-[260px] ">
-            <h3 className="text-xl font-semibold mb-6">E-Comm</h3>
+            <div className="flex justify-start items-center gap-2">
+              <img src="./images/logo.png" alt="logo" />
+              <span className="text-xl font-bold">E-Comm</span>
+            </div>
             <p className="mt-2 font-light text-sm">
               Lorem ipsum is simply dummy text of the printing and typesetting
               industry.Lorem Ipsum has been the industry's standard dummy text
@@ -20,14 +24,18 @@ const Footer = () => {
               scrambled.
             </p>
             <div className="flex mt-4 space-x-4">
-              <a href="#" className="hover:text-light-blue-300">
-                <FaFacebookF />
+              <a href="#" className="hover:text-[#ffff]">
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                  style={{ color: "#385C8E" }}
+                />
               </a>
+              <a href="#" className="hover:text-light-blue-300"></a>
               <a href="#" className="hover:text-light-blue-300">
-                <FaTwitter />
-              </a>
-              <a href="#" className="hover:text-light-blue-300">
-                <FaInstagram />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  style={{ color: "#03A9F4" }}
+                />
               </a>
             </div>
           </div>
