@@ -98,20 +98,20 @@ const Home = () => {
           </div>
           <img
             className="absolute top-[-110px] right-0"
-            src="./images/shoe.png"
+            src="images/shoe.png"
           />
         </div>
         <div className="flex w-full justify-evenly items-center mb-60">
           <div className="flex flex-col items-center gap-10">
-            <img src="./images/shipping.png" alt="shipping" />
+            <img src="images/shipping.png" alt="shipping" />
             <span className="text-[27px] font-medium">FREE SHIPPING</span>
           </div>
           <div className="flex flex-col items-center gap-8">
-            <img src="./images/refund.png" alt="refund" />
+            <img src="images/refund.png" alt="refund" />
             <span className="text-[27px] font-medium">100% REFUND</span>
           </div>
           <div className="flex flex-col items-center gap-8">
-            <img src="./images/support.png" alt="support" />
+            <img src="images/support.png" alt="support" />
             <span className="text-[27px] font-medium">SUPPORT 24/7</span>
           </div>
         </div>
