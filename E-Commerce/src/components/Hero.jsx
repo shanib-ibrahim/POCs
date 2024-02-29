@@ -4,7 +4,7 @@ const Hero = () => {
       className="relative bg-cover bg-no-repeat "
       style={{
         "background-image": `url(
-          images/offer-banner.png
+          ./images/offer-banner.png
         )`,
         height: "800px",
       }}
