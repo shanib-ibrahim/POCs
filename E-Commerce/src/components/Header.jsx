@@ -44,7 +44,7 @@ const Header = () => {
             <span>My Profile</span>{" "}
           </div>
           <div className="relative">
-            <Link to="/POCs/E-Commerce/cart">
+            <Link to="/POCs/cart">
               <BsCart2 size={24} />
               <span
                 className="absolute -top-1.5 -right-2 bg-[#FB7181] w-4 h-4 rounded-full  
@@ -67,7 +67,7 @@ const Header = () => {
       {/* header second-part */}
       <div className="flex justify-between p-10 pr-40">
         <div className="flex justify-center items-center gap-2 ml-10">
-          <img src="/POCs/E-Commerce/images/logo.png" alt="logo" />
+          <img src="/POCs/images/logo.png" alt="logo" />
           <span className="text-xl font-bold">E-Comm</span>
         </div>
         <ul className="flex gap-[100px] text-2xl font-medium ">
@@ -78,7 +78,7 @@ const Header = () => {
                 : ""
             } hover:text-[#40BFFF]`}
           >
-            <Link to="/POCs/E-Commerce/">HOME</Link>
+            <Link to="/POCs/">HOME</Link>
           </li>
           {categories &&
             categories
@@ -94,7 +94,7 @@ const Header = () => {
                       : ""
                   }  hover:text-[#40BFFF]`}
                 >
-                  <Link to={`/POCs/E-Commerce/category/${category}`}>
+                  <Link to={`/POCs/category/${category}`}>
                     {category.toUpperCase()}
                   </Link>
                 </li>
@@ -106,7 +106,7 @@ const Header = () => {
                 : ""
             } hover:text-[#40BFFF]`}
           >
-            <Link to="/POCs/E-Commerce/contact">CONTACT</Link>
+            <Link to="/POCs/contact">CONTACT</Link>
           </li>
         </ul>
       </div>

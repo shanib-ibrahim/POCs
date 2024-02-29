@@ -91,27 +91,27 @@ const Home = () => {
             <span className="text-2xl mb-2">
               Performance and design. Taken right to the edge.
             </span>
-            <Link to={"/POCs/E-Commerce/"} className="font-bold">
+            <Link to={"/POCs/"} className="font-bold">
               <span>SHOP NOW</span>
               <hr className="border-b-[2px] w-[65px]" />
             </Link>
           </div>
           <img
             className="absolute top-[-110px] right-0"
-            src="/POCs/E-Commerce/images/shoe.png"
+            src="/POCs/images/shoe.png"
           />
         </div>
         <div className="flex w-full justify-evenly items-center mb-60">
           <div className="flex flex-col items-center gap-10">
-            <img src="/POCs/E-Commerce/images/shipping.png" alt="shipping" />
+            <img src="/POCs/images/shipping.png" alt="shipping" />
             <span className="text-[27px] font-medium">FREE SHIPPING</span>
           </div>
           <div className="flex flex-col items-center gap-8">
-            <img src="/POCs/E-Commerce/images/refund.png" alt="refund" />
+            <img src="/POCs/images/refund.png" alt="refund" />
             <span className="text-[27px] font-medium">100% REFUND</span>
           </div>
           <div className="flex flex-col items-center gap-8">
-            <img src="/POCs/E-Commerce/images/support.png" alt="support" />
+            <img src="/POCs/images/support.png" alt="support" />
             <span className="text-[27px] font-medium">SUPPORT 24/7</span>
           </div>
         </div>

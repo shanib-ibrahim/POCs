@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex ml-[185px]  gap-80 mb-10">
           <div className="w-[260px] ">
             <div className="flex justify-start items-center gap-2">
-              <img src="/POCs/E-Commerce/images/logo.png" alt="logo" />
+              <img src="/POCs/images/logo.png" alt="logo" />
               <span className="text-xl font-bold">E-Comm</span>
             </div>
             <p className="mt-2 font-light text-sm">
@@ -155,7 +155,7 @@ const Footer = () => {
           </span>
           <div className="flex">
             <img
-              src="/POCs/E-Commerce/images/brands.png"
+              src="/POCs/images/brands.png"
               alt="payment cards"
               className="h-6 mr-4"
             />
