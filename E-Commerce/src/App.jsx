@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <>
-      <Router>
+      <Router basename="/POCs/E-Commerce/">
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
