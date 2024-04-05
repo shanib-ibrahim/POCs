@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #171747;
+}
+h1 {
+  color: #fff;
+  /*  font-family: cursive; */
+  text-align: center;
+  font-size: 3rem;
+}
+.chat {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.chat h2 {
+  font-size: 2.2rem;
+  /* font-family: cursive; */
+  text-align: center;
+}
+.msg {
+  width: 420px;
+  height: 500px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  margin: 1rem auto;
+}
