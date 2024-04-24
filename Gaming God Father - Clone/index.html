@@ -6,6 +6,10 @@
     <title>GGF</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -62,25 +66,33 @@
     </header>
     <main class="main">
       <div class="slider">
-        <div class="slide">
-          <img src="./images/silder1.png" alt="slider1" />
-          <p>B2B White Label</p>
+        <div class="wrapper">
+          <div class="slide">
+            <img src="./images/silder1.png" alt="slider1" />
+            <p>B2B White Label</p>
+          </div>
+          <div class="slide">
+            <img src="./images/silder2.png" alt="slider2" />
+            <p>B2C White Label</p>
+          </div>
+          <div class="slide">
+            <img src="./images/silder3.png" alt="silder3" />
+            <p>Exchange iFrame</p>
+          </div>
+          <div class="slide">
+            <img src="./images/silder4.png" alt="slider4" />
+            <p>Casino Engine</p>
+          </div>
         </div>
-        <div class="slide">
-          <img src="./images/silder2.png" alt="slider2" />
-          <p>B2C White Label</p>
-        </div>
-        <div class="slide">
-          <img src="./images/silder3.png" alt="silder3" />
-          <p>Exchange iFrame</p>
-        </div>
-        <div class="slide">
-          <img src="./images/silder4.png" alt="slider4" />
-          <p>Casino Engine</p>
+        <div class="pagination">
+          <div class="rectangle"></div>
+          <div class="rectangle rect-active"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
         </div>
       </div>
 
-      <!-- <div class="service-info">
+      <div class="service-info">
         <div class="service-top">
           <div class="service-info__title">
             <p>Dedication to</p>
@@ -104,7 +116,7 @@
           </div>
         </div>
       </div>
-      <hr />
+
       <div class="product-info">
         <p class="product-info__title">OUR PRODUCTS</p>
         <div class="product-info__desc">
@@ -124,11 +136,63 @@
             </p>
             <button>Learn More</button>
           </div>
-          <p class="date-range">2001 - 2012</p>
+          <div class="date">
+            <div class="arrow-up">↓</div>
+            <p class="date-range">2001</p>
+            <p class="date-range">-</p>
+            <p class="date-range">2012</p>
+            <div class="arrow-down">↑</div>
+          </div>
         </div>
       </div>
-      <hr /> -->
+      <div class="games-info">
+        <p>COVERING OVER 1,600+ SPORTS & 5,000+ CASINO GAMES</p>
+      </div>
+
+      <div class="contact">
+        <p>PLUG YOUR PRODUCT INTO</p>
+        <p>THE BEST SPORTS DATA FEEDS</p>
+        <p>IN THE WORLD</p>
+        <button>CONTACT US</button>
+      </div>
     </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h3>CONTACT US</h3>
+          <p>Gaming GodFather Best i-Gaming Solutions</p>
+          <p>
+            <span class="footer-blue">Email:</span> ggfgaminggodfather@gmail.com
+          </p>
+          <p><span class="footer-blue">Whats App :</span> +918128688200</p>
+        </div>
+        <div class="footer-mid">
+          <a href="#">
+            <p>Logo</p>
+            <p class="logo-title"><span>GAMING</span> GOD FATHER</p></a
+          >
+          <p>
+            Servicing more than 300 operators from different jurisdictions, we
+            are constantly striving to offer our clients the best range of
+            services, value and support in the market.
+          </p>
+        </div>
+        <div class="footer-right">
+          <h3>SOCIALS</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+            <li>Pinterest</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-down">
+        &copy 2020-2024 Gaming GodFather. All rights reserved.
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

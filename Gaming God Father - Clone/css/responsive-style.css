@@ -1,7 +1,21 @@
+@media (max-width: 1680px) {
+  .product-info__details img {
+    width: 30rem;
+    height: 25rem;
+  }
+}
+
 @media (max-width: 1440px) {
   .hero-image img {
     width: 60rem;
     height: 40rem;
+  }
+  .product-info__details img {
+    width: 30rem;
+    height: 25rem;
+  }
+  .games-info {
+    font-size: 4rem;
   }
 }
 
@@ -13,6 +27,9 @@
     width: 60rem;
     height: 40rem;
   }
+  .games-info {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 1074px) {
@@ -22,6 +39,9 @@
   .hero-image img {
     width: 60rem;
     height: 40rem;
+  }
+  .games-info {
+    font-size: 4rem;
   }
 }
 
@@ -39,6 +59,9 @@
   .hero-image img {
     width: 60rem;
     height: 40rem;
+  }
+  .games-info {
+    font-size: 4rem;
   }
 }
 
@@ -90,5 +113,68 @@
   .hero-image img {
     width: 50rem;
     height: 30rem;
+  }
+  .service-top {
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .service-card {
+    width: 45rem;
+    height: 55rem;
+  }
+  .service-bottom {
+    flex-direction: column;
+  }
+  .product-info__details {
+    flex-direction: column;
+    height: 60rem;
+  }
+  .date {
+    flex-direction: row;
+  }
+  .details {
+    border: none;
+    border-bottom: solid 1px #000;
+  }
+  .date-range {
+    writing-mode: horizontal-tb;
+  }
+  .arrow-up {
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+  .arrow-down {
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+  .games-info {
+    font-size: 4rem;
+  }
+  .footer-top {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-left {
+    border: none;
+    flex-direction: row;
+    font-size: 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+  }
+  .footer-left p {
+    font-size: 1.6rem;
+  }
+  .footer-mid {
+    border-bottom: 1px solid #000000;
+  }
+  .footer-right {
+    border: none;
+  }
+  .footer-right ul {
+    flex-direction: row;
+  }
+  .footer-down {
+    display: block;
   }
 }
