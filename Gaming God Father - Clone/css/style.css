@@ -173,12 +173,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 3rem;
   padding: 5rem;
   align-items: center;
   margin-bottom: 2.5rem;
   background-color: #e8e8ed;
   border-bottom: 1px solid #000000;
+  overflow: hidden;
 }
 .wrapper {
   display: flex;

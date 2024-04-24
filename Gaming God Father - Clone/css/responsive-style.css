@@ -110,6 +110,10 @@
   .hero-banner {
     flex-direction: column;
   }
+  .wrapper {
+    flex-direction: column;
+    gap: 4rem;
+  }
   .hero-image img {
     width: 50rem;
     height: 30rem;
