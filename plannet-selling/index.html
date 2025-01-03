@@ -32,6 +32,35 @@
         margin: 0 5px;
         border: 2px solid white;
         padding: 0 10px;
+        text-decoration: none;
+        border-radius: 50px;
+      }
+      .logo {
+        border: 2px solid white;
+        padding: 10px 5px;
+      }
+      .signup {
+        background-color: white;
+        color: black;
+      }
+      .signup:hover {
+        background-color: black;
+        color: white;
+      }
+      main {
+        display: flex;
+        height: 90vh;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 150px;
+      }
+      .contentLeft {
+        flex: 1;
+      }
+      .contentMid {
+        flex: 2;
+      }
+      .contentRight {
       }
     </style>
   </head>
@@ -45,10 +74,26 @@
           <li><a href="#">Buy Now</a></li>
           <li><a href="#">Sell Now</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a href="#" class="signup">Sign Up</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="contentLeft">
+        <h2>Mercury</h2>
+      </div>
+      <div class="contentMid">
+        <p>
+          Mercury is the first planet from the Sun and the smallest in the Solar
+          System. In English, it is named after the ancient Roman god Mercurius,
+          god of commerce and communication, and the messenger of the gods.
+          Mercury is classified as a terrestrial planet, with roughly the same
+          surface gravity as Mars.
+        </p>
+      </div>
+      <div class="contentRight">
+        <img src="About.png" alt="Mercury" class="mercury" />
+      </div>
+    </main>
   </body>
 </html>
