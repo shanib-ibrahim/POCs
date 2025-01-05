@@ -1,3 +1,5 @@
+import Auth from "./auth";
+
 const Router = (server) => {
   // home route with the get method and a handler
   server.get("/v1", (req, res) => {
@@ -14,5 +16,6 @@ const Router = (server) => {
       });
     }
   });
+  app.use("/v1/auth", Auth);
 };
 export default Router;
