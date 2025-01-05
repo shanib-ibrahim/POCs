@@ -26,7 +26,7 @@ export async function Register(req, res) {
         message: "It seems you already have an account, please log in instead.",
       });
     const savedUser = await newUser.save(); // save new user into the database
-    const { role, ...user_data } = savedUser._doc;
+    const { password, role, ...user_data } = savedUser._doc;
     res.status(200).json({
       status: "success",
       data: [user_data],

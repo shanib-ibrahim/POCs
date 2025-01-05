@@ -1,4 +1,4 @@
-import Auth from "./auth";
+import Auth from "./auth.js";
 
 const Router = (server) => {
   // home route with the get method and a handler
@@ -16,6 +16,6 @@ const Router = (server) => {
       });
     }
   });
-  app.use("/v1/auth", Auth);
+  server.use("/v1/auth", Auth);
 };
 export default Router;
