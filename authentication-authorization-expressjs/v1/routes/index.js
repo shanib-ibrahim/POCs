@@ -1,4 +1,4 @@
-import { Verify } from "../middleware/verify.js";
+import { Verify, VerifyRole } from "../middleware/verify.js";
 import Auth from "./auth.js";
 
 const Router = (server) => {
@@ -21,6 +21,12 @@ const Router = (server) => {
     res.status(200).json({
       status: "success",
       message: "Welcome to the your Dashboard!",
+    });
+  });
+  server.get("/v1/admin", Verify, VerifyRole, (req, res) => {
+    res.status(200).json({
+      status: "success",
+      message: "Welcome to the Admin portal!",
     });
   });
   server.use("/v1/auth", Auth);
