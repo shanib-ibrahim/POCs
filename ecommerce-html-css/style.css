@@ -247,7 +247,7 @@ button.normal{
 #banners h2,h4,span{
     color:rgb(248,248,248)
 }
-#banner .big-banners{
+#banners .big-banners{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,4 +310,39 @@ button.normal{
     justify-content: center;
     padding: 25px;
     background-size: cover;
+}
+#banners .small-banners h2{
+    font-size: 25px;
+}
+#banners .small-banners h5{
+    color: #771818;
+}
+
+
+#footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 75px;
+    background-color: #ececec;
+}
+#footer p, #footer a{
+text-decoration: none;
+color:rgb(109,109,109);
+}
+#footer a:hover{
+    color: #088178;
+}
+#footer .about a{
+    display: block;
+    padding: 8px 0;
+}
+#footer .myaccount a{
+    display: block;
+    padding: 8px 0;
+}
+
+#footer .download img{
+    border:1px solid #08817969;
+    border-radius: 7px;
 }
