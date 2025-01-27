@@ -16,13 +16,41 @@ const validateInputs = () => {
   const passwordValue = password.value.trim();
   const cpasswordValue = cpassword.value.trim();
 
-  if (userName === "") {
-    setError(userName, "Username is Required");
+  if (usernameValue === "") {
+    setError(username, "Username is Required");
   } else {
     setSuccess(username);
+  }
+
+  if (passwordValue === "") {
+    setError(password, "Password is Required");
+  } else if (passwordValue.length < 8) {
+    setError(password, "Password must be atleast 8 character");
+  } else {
+    setSuccess(password);
+  }
+
+  if (cpasswordValue === "") {
+    setError(cpassword, "Please Confirm Your Password");
+  } else if (cpasswordValue !== password) {
+    setError(password, "Password does not match");
+  } else {
+    setSuccess(cpassword);
   }
 };
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+  errorDisplay.innerText = message;
+  inputControl.classList.add("error");
+  inputControl.classList.remove("success");
+};
+
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+  errorDisplay.innerText = "";
+  inputControl.classList.add("success");
+  inputControl.classList.remove("error");
 };

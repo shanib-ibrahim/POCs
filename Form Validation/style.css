@@ -47,3 +47,9 @@ h1 {
   height: 13px;
   margin: 10px;
 }
+.form-control.sucess input {
+  border-color: green;
+}
+.form-control.error input {
+  border-color: red;
+}
