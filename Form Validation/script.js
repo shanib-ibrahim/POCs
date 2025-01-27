@@ -22,6 +22,14 @@ const validateInputs = () => {
     setSuccess(username);
   }
 
+  if (emailValue === "") {
+    setError(email, "Email is required");
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, "Provide a valid email address");
+  } else {
+    setSuccess(email);
+  }
+
   if (passwordValue === "") {
     setError(password, "Password is Required");
   } else if (passwordValue.length < 8) {
@@ -54,3 +62,5 @@ const setSuccess = (element) => {
   inputControl.classList.add("success");
   inputControl.classList.remove("error");
 };
+
+const isValidEmail = (email) => {};
