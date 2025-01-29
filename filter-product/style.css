@@ -34,6 +34,10 @@
   border: none;
   cursor: pointer;
 }
+.category-btn.active {
+  background-color: orange;
+}
+
 .product-item {
   border: 1px solid #ccc;
   padding: 10px;
