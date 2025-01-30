@@ -6,8 +6,12 @@ button.forEach((element) => {
     if (e.target.textContent === "C") {
       input.innerText = "";
     } else if (e.target.textContent === "<") {
+      input.innerText = input.innerText.slice(0, -1);
+    } else if (e.target.textContent === "=") {
+      input.innerText = eval(input.innerText);
     } else {
       input.innerText += e.target.textContent;
     }
+    input.scrollLeft = input.scrollWidth;
   });
 });
