@@ -1,4 +1,4 @@
-const APIKEY = "c36acaa60be3ca9122bc7b518d365e5b";
+import config from "./config.js";
 
 const input = document.querySelector("input");
 const btn = document.getElementById("btn");
@@ -14,11 +14,21 @@ btn.addEventListener("click", () => {
 
 const getWeather = (city) => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config.APIKEY}`
   )
     .then((res) => res.json())
     .then((data) => {
       const iconCode = data.weather[0].icon;
-      icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${iconCode}.png" alt="Weather Icon>`;
+      icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${iconCode}.png" alt="Weather Icon"/>`;
+
+      const weatherCity = data.name;
+      const weatherCountry = data.sys.country;
+      weather.innerHTML = `${weatherCity}, ${weatherCountry}`;
+
+      let weatherTemp = data.main.temp;
+      weatherTemp = weatherTemp - 273;
+      temperature.innerHTML = `${weatherTemp.toFixed(2)}°C`;
+      const weatherDesc = data.weather[0].description;
+      description.innerHTML = `${weatherDesc}`;
     });
 };
