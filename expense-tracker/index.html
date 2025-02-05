@@ -24,8 +24,20 @@
           <option value="Entertainment">Entertainment</option>
           <option value="Others">Others</option></select
         ><br />
-        <input type="number" id="amount" placeholder="Amount" />
+        <input type="number" id="amount" placeholder="Amount" required /><br />
+        <input type="submit" value="Add Expense" />
       </form>
+      <h3>Expense Summary</h3>
+      <table id="expenseTable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="expenseList"></tbody>
+      </table>
     </div>
     <script src="script.js"></script>
   </body>
