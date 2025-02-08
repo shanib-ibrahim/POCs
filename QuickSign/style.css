@@ -22,3 +22,13 @@ select,
 button {
   width: 80%;
 }
+.top > .block {
+  margin: 10px;
+}
+.bottom > button {
+  margin: 10px;
+}
+.block > p {
+  margin: 10px auto;
+  width: 50%;
+}
