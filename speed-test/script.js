@@ -31,6 +31,10 @@ function loadParagraph() {
     typingText.innerHTML += `<span>${char}</span>`;
   }
   typingText.querySelectorAll("span")[0].classList.add("active");
+  document.addEventListener("keydown", () => input.focus());
+  typingText.addEventListener("click", () => {
+    input.focus();
+  });
 }
 
 //Handle User Input
@@ -38,15 +42,29 @@ function initTyping() {
   const char = typingText.querySelectorAll("span");
   const typeChar = input.value.charAt(charIndex);
   if (charIndex < char.length && timeLeft > 0) {
+    if (!isTyping) {
+      timer = setInterval(initTime, 1000);
+      isTyping = true;
+    }
     if (char[charIndex].innerText === typeChar) {
       char[charIndex].classList.add("correct");
-      console.log("correct");
     } else {
       mistake++;
       char[charIndex].classList.add("incorrect");
-      console.log("incorrect");
     }
     charIndex++;
+    char[charIndex].classList.add("active");
+    mistakes.innerText = mistake;
+  } else {
+  }
+}
+
+function initTime() {
+  if (timeLeft > 0) {
+    timeLeft--;
+    time.innerText = timeLeft;
+  } else {
+    clearInterval(timer);
   }
 }
 
