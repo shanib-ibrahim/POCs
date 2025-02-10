@@ -4,7 +4,7 @@ const time = document.querySelector(".time span b");
 const mistakes = document.querySelector(".mistakes span");
 const wpm = document.querySelector(".wpm span");
 const cpm = document.querySelector(".cpm span");
-const btn = document.querySelector(".button");
+const btn = document.querySelector("button");
 
 //set value
 let timer;
@@ -55,7 +55,10 @@ function initTyping() {
     charIndex++;
     char[charIndex].classList.add("active");
     mistakes.innerText = mistake;
+    cpm.innerText = charIndex - mistake;
   } else {
+    clearInterval(timer);
+    input.value = "";
   }
 }
 
@@ -63,10 +66,29 @@ function initTime() {
   if (timeLeft > 0) {
     timeLeft--;
     time.innerText = timeLeft;
+    let wpmVal = Math.round(
+      (charIndex - mistake) / 5 / ((maxTime - timeLeft) * 60)
+    );
+    wpm.innerText = wpmVal;
   } else {
     clearInterval(timer);
   }
 }
 
+function reset() {
+  loadParagraph();
+  clearInterval(timer);
+  timeLeft = maxTime;
+  charIndex = 0;
+  mistake = 0;
+  isTyping = false;
+  wpm.innerText = 0;
+  cpm.innerText = 0;
+  mistakes.innerText = 0;
+  time.innerText = timeLeft;
+  input.value = "";
+}
+
 input.addEventListener("input", initTyping);
+btn.addEventListener("click", reset);
 loadParagraph();
