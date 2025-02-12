@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f5f8;
+  height: 100dvh;
+}
+.review-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  text-align: center;
+  border: 1px solid red;
+}
+.review-card {
+  padding: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+.review-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 8px solid #49a6ea;
+  border-left: none;
+  border-bottom: none;
+  position: relative;
+}
+.review-card img::before {
+  content: '"';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #49a6ea;
+}
