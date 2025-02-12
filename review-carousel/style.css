@@ -39,6 +39,11 @@ body {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,31 +55,16 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .review-container {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  text-align: center;
-  border: 1px solid red;
-}
-.review-card {
-  padding: 40px;
-  width: 60%;
-  background-color: #fff;
-}
 .review-card img {
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: 8px solid #49a6ea;
-  border-left: none;
-  border-bottom: none;
-  position: relative;
 }
-.review-card img::before {
-  content: '"';
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  background-color: #49a6ea;
-} */
+.review-details h3 {
+  letter-spacing: 4px;
+}
+.review-container span {
+  color: #49a6ea;
+  text-transform: uppercase;
+  font-weight: 800;
+}
