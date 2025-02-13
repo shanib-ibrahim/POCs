@@ -49,16 +49,40 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  width: 60%;
+  width: 40%;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.review-card img {
+.profile {
+  position: relative;
+  background-color: #49a6ea;
   width: 9rem;
   height: 9rem;
   border-radius: 50%;
+}
+
+.profile img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  top: 53%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.profile i {
+  position: absolute;
+  left: -2px;
+  top: 10px;
+  background-color: #49a6ea;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  z-index: 1;
 }
 .review-details h3 {
   letter-spacing: 4px;
@@ -67,4 +91,27 @@ body {
   color: #49a6ea;
   text-transform: uppercase;
   font-weight: 500;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn button {
+  border: 2px solid #49a6ea;
+  border-radius: 6px;
+  padding: 3px 8px;
+  background-color: #f1f5f8;
+  color: #49a6ea;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn .slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  color: #49a6ea;
+  font-size: 1.2rem;
 }
