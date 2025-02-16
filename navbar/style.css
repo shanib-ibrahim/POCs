@@ -46,7 +46,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  width: 50px;
+  width: 48px;
   height: 30px;
   padding: 0px 8px;
 }
@@ -75,5 +75,16 @@ nav ul li a:hover {
   }
   nav {
     display: none;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  nav ul li {
+    font-size: 1rem;
   }
 }
