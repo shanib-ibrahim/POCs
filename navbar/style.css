@@ -56,11 +56,19 @@ nav ul li a:hover {
   border-radius: 10px;
   background-color: #49a6ea;
 }
+.hamburger .line1.click {
+  transform: rotate(45deg);
+  transition: transform ease 0.5;
+}
+
 .hamburger .line2 {
   width: 100%;
   height: 4px;
   border-radius: 10px;
   background-color: #49a6ea;
+}
+.hamburger .line2.click {
+  display: none;
 }
 .hamburger .line3 {
   width: 100%;
@@ -68,16 +76,25 @@ nav ul li a:hover {
   border-radius: 10px;
   background-color: #49a6ea;
 }
+.hamburger .line3.click {
+  transform: rotate(-45deg);
+  transition: transform ease 0.5;
+}
 
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+
   nav {
     display: none;
   }
+  header {
+    padding: 20px;
+  }
   header h1 {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
   }
 }
 @media (max-width: 1024px) {
