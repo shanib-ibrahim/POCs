@@ -44,15 +44,15 @@ nav ul li a:hover {
 label {
   display: none;
   flex-direction: column;
-  width: 50px;
+  width: 40px;
   cursor: pointer;
 }
 
 label span {
   background: #49a6ea;
   border-radius: 10px;
-  height: 5px;
-  margin: 4px 0;
+  height: 4px;
+  margin: 3px 0;
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
@@ -85,7 +85,8 @@ input[type="checkbox"]:checked ~ span:nth-of-type(2) {
 input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   transform-origin: bottom;
   width: 50%;
-  transform: translate(26px, -8px) rotatez(45deg);
+  transform: translate(20px, -10px) rotatez(45deg);
+  margin: 4px 0;
 }
 @media (max-width: 768px) {
   label {
