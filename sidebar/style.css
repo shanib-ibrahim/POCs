@@ -45,21 +45,7 @@ body {
 }
 
 label {
-  position: absolute;
-  right: 40px;
-  top: 30px;
-  width: 40px;
-  height: 40px;
   border: 1px solid red;
-}
-
-label span {
-  height: 4px;
-  width: 100%;
-  color: #66b1e8;
-  border: 1px solid red;
-}
-
-input[type="checkbox"] {
-  display: none;
+  height: 50px;
+  width: 50px;
 }
