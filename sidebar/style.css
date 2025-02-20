@@ -19,7 +19,7 @@ body {
   padding: 20px 10px;
   background-color: #fff;
   position: absolute;
-  left: 0;
+  left: -400px;
   transition: left 0.5s ease;
 }
 
@@ -57,6 +57,7 @@ body {
   height: 40px;
   position: relative;
   margin-right: 0.6rem;
+  cursor: pointer;
   span {
     position: absolute;
     top: 50%;
@@ -75,6 +76,9 @@ body {
   }
 }
 
+.sidebar.open {
+  left: 0;
+}
 /* ----------------Hamburger--------------- */
 .hamburger {
   position: absolute;
