@@ -9,3 +9,9 @@ hamburger.addEventListener("click", () => {
 close.addEventListener("click", () => {
   sidebar.classList.remove("open");
 });
+
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !sidebar.contains(e.target)) {
+    sidebar.classList.remove("open");
+  }
+});
