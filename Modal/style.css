@@ -9,6 +9,7 @@ body {
   display: grid;
   place-items: center;
   height: 100dvh;
+  position: relative;
 }
 .main-container {
   display: flex;
@@ -30,8 +31,19 @@ body {
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     font-weight: 800;
+    border: none;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
   }
-  .modal-btn:active {
-    outline: none;
+  .modal-btn:hover {
+    background-color: transparent;
+    border: 1px solid #49a6ea;
+    color: #49a6ea;
   }
+}
+.modal {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 12rem;
+  position: absolute;
 }
