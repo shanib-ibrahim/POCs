@@ -71,6 +71,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   .close span {
     display: inline-block;
@@ -78,7 +79,6 @@ body {
     height: 4px;
     width: 100%;
     background-color: red;
-    cursor: pointer;
   }
   .close span:nth-of-type(1) {
     transform: rotate(45deg);
