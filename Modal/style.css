@@ -48,12 +48,49 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  display: grid;
+  display: none;
   place-items: center;
+  transition: display 0.5s ease-in-out;
+}
+.modal-overlay.open-modal {
+  display: grid;
+  transition: display 0.5s ease-in-out;
 }
 .modal-container {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 12rem;
   border-radius: 10px;
+  position: relative;
+  .close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .close span {
+    display: inline-block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: red;
+    cursor: pointer;
+  }
+  .close span:nth-of-type(1) {
+    transform: rotate(45deg);
+  }
+  .close span:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+  .close:hover {
+    transform: scale(1.5);
+    transition: scale 0.5s ease-in-out;
+    .close span {
+      background-color: rgb(255, 0, 0, 0.5);
+    }
+  }
 }
