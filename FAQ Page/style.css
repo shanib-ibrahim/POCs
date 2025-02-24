@@ -23,11 +23,13 @@ h1 {
   font-family: "Great Vibes", serif;
   color: #c7a268;
   font-size: 3rem;
+  margin-top: 10rem;
 }
 .faq {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 40%;
 }
 .faq-question {
   letter-spacing: 4px;
@@ -40,13 +42,22 @@ h1 {
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
 }
 .faq-answer {
   display: none;
+  padding: 1rem 0;
+  transition: display 0.5s ease;
+}
+.faq-right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .faq-right .open-btn {
   width: 1.6rem;
   height: 1.6em;
+  margin-left: 4rem;
   border: 2px solid #c7a268;
   position: relative;
   cursor: pointer;
@@ -65,4 +76,7 @@ h1 {
   span:nth-of-type(2) {
     transform: rotate(90deg);
   }
+}
+.faq-answer.open {
+  display: block;
 }
