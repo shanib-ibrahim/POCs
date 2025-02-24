@@ -45,9 +45,11 @@ h1 {
   position: relative;
 }
 .faq-answer {
-  display: none;
   padding: 1rem 0;
-  transition: display 0.5s ease;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 .faq-right {
   position: absolute;
@@ -78,7 +80,8 @@ h1 {
   }
 }
 .faq-answer.open {
-  display: block;
+  opacity: 1;
+  max-height: 200px;
 }
 .open-btn.open {
   span:nth-of-type(1) {
