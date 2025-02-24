@@ -80,3 +80,11 @@ h1 {
 .faq-answer.open {
   display: block;
 }
+.open-btn.open {
+  span:nth-of-type(1) {
+    transform: rotate(45deg);
+  }
+  span:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+}
