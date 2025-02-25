@@ -75,6 +75,7 @@ h1 {
     height: 4px;
     width: 18px;
     background-color: #c7a268;
+    transition: transform 0.5s ease;
   }
   span:nth-of-type(2) {
     transform: rotate(90deg);
