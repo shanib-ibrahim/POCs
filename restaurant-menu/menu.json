@@ -1,0 +1,92 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "category": "Breakfast",
+      "name": "Pancakes",
+      "description": "Fluffy pancakes served with syrup, fresh berries, and whipped cream.",
+      "price": "$8.99",
+      "image": "images/pancakes.jpg"
+    },
+    {
+      "id": 2,
+      "category": "Breakfast",
+      "name": "Avocado Toast",
+      "description": "Sliced avocado on toasted sourdough bread, topped with a poached egg.",
+      "price": "$7.50",
+      "image": "images/avocado-toast.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Breakfast",
+      "name": "Classic Omelette",
+      "description": "A three-egg omelette with your choice of fillings, served with toast.",
+      "price": "$9.50",
+      "image": "images/classic-omelette.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Breakfast",
+      "name": "French Toast",
+      "description": "Golden brown French toast served with maple syrup and powdered sugar.",
+      "price": "$7.99",
+      "image": "images/french-toast.jpg"
+    },
+    {
+      "id": 5,
+      "category": "Breakfast",
+      "name": "Granola Bowl",
+      "description": "A healthy granola bowl topped with yogurt, fresh fruit, and honey.",
+      "price": "$6.99",
+      "image": "images/granola-bowl.jpg"
+    },
+    {
+      "id": 6,
+      "category": "Lunch",
+      "name": "Grilled Chicken Salad",
+      "description": "A healthy salad with grilled chicken, mixed greens, and balsamic dressing.",
+      "price": "$12.99",
+      "image": "images/grilled-chicken-salad.jpg"
+    },
+    {
+      "id": 7,
+      "category": "Lunch",
+      "name": "Cheeseburger",
+      "description": "Classic cheeseburger with lettuce, tomato, and your choice of cheese.",
+      "price": "$10.50",
+      "image": "images/cheeseburger.jpg"
+    },
+    {
+      "id": 8,
+      "category": "Shakes",
+      "name": "Chocolate Milkshake",
+      "description": "Creamy chocolate milkshake topped with whipped cream and chocolate shavings.",
+      "price": "$5.99",
+      "image": "images/chocolate-milkshake.jpg"
+    },
+    {
+      "id": 9,
+      "category": "Shakes",
+      "name": "Strawberry Milkshake",
+      "description": "Delicious strawberry milkshake topped with whipped cream and fresh strawberries.",
+      "price": "$5.99",
+      "image": "images/strawberry-milkshake.jpg"
+    },
+    {
+      "id": 10,
+      "category": "Dinner",
+      "name": "Grilled Salmon",
+      "description": "Fresh grilled salmon served with steamed vegetables and garlic butter sauce.",
+      "price": "$18.99",
+      "image": "images/grilled-salmon.jpg"
+    },
+    {
+      "id": 11,
+      "category": "Dinner",
+      "name": "Steak Frites",
+      "description": "Tender steak served with crispy French fries and garlic butter sauce.",
+      "price": "$22.50",
+      "image": "images/steak-frites.jpg"
+    }
+  ]
+}
