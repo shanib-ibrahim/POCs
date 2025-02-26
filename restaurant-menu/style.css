@@ -10,11 +10,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background-color: #f1f5f8;
 }
 header {
   text-align: center;
+  padding: 2rem;
   h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #0f2a41;
     position: relative;
   }
@@ -32,6 +34,19 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1rem;
+  }
+  ul li {
+    border: 1px solid #c6a166;
+    border-radius: 5px;
+    padding: 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  ul li:hover {
+    border: 1px solid #0000;
+    background-color: #c6a166;
+    a {
+      color: #fff;
+    }
   }
   ul li a {
     text-decoration: none;
