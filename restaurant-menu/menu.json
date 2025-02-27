@@ -6,7 +6,7 @@
       "name": "Pancakes",
       "description": "Fluffy pancakes served with syrup, fresh berries, and whipped cream.",
       "price": "$8.99",
-      "image": "images/pancakes.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "name": "Avocado Toast",
       "description": "Sliced avocado on toasted sourdough bread, topped with a poached egg.",
       "price": "$7.50",
-      "image": "images/avocado-toast.jpg"
+      "image": "https://www.mediterraneanliving.com/wp-content/uploads/2018/04/image4.jpg"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "name": "Classic Omelette",
       "description": "A three-egg omelette with your choice of fillings, served with toast.",
       "price": "$9.50",
-      "image": "images/classic-omelette.jpg"
+      "image": "https://cravingsjournal.com/wp-content/uploads/2024/03/omelette-the-bear-2-scaled.jpg"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "name": "French Toast",
       "description": "Golden brown French toast served with maple syrup and powdered sugar.",
       "price": "$7.99",
-      "image": "images/french-toast.jpg"
+      "image": "https://cdn.loveandlemons.com/wp-content/uploads/2024/08/french-toast-recipe.jpg"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "name": "Granola Bowl",
       "description": "A healthy granola bowl topped with yogurt, fresh fruit, and honey.",
       "price": "$6.99",
-      "image": "images/granola-bowl.jpg"
+      "image": "https://cdn.shortpixel.ai/spai/w_680+q_lossless+ret_img+to_webp/lemonsandbasil.com/wp-content/uploads/2019/05/vegan-smoothie-bowl10.jpg"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "name": "Grilled Chicken Salad",
       "description": "A healthy salad with grilled chicken, mixed greens, and balsamic dressing.",
       "price": "$12.99",
-      "image": "images/grilled-chicken-salad.jpg"
+      "image": "https://paleoglutenfree.com/wp-content/uploads/2018/07/whole30-lunch-grilled-chicken-salad-7-of-9-674x1024.jpg"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "name": "Cheeseburger",
       "description": "Classic cheeseburger with lettuce, tomato, and your choice of cheese.",
       "price": "$10.50",
-      "image": "images/cheeseburger.jpg"
+      "image": "https://www.foodandwine.com/thmb/LUEdbNTLcdq_BtCmINp23zQbQro=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheeseburgers-eat-delicious-XL-BLOG0517-b578f43651854aeb8e2e605580094811.jpg"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "name": "Chocolate Milkshake",
       "description": "Creamy chocolate milkshake topped with whipped cream and chocolate shavings.",
       "price": "$5.99",
-      "image": "images/chocolate-milkshake.jpg"
+      "image": "https://hips.hearstapps.com/hmg-prod/images/delish-220524-chocolate-milkshake-001-ab-web-1654180529.jpg?crop=1xw:0.8435280189423836xh;center,top&resize=1200:*"
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "name": "Strawberry Milkshake",
       "description": "Delicious strawberry milkshake topped with whipped cream and fresh strawberries.",
       "price": "$5.99",
-      "image": "images/strawberry-milkshake.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiYLuhalzJ57iCVsVJsIOnHgAtjYUQ-GUMPw&s"
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "name": "Grilled Salmon",
       "description": "Fresh grilled salmon served with steamed vegetables and garlic butter sauce.",
       "price": "$18.99",
-      "image": "images/grilled-salmon.jpg"
+      "image": "https://www.thespruceeats.com/thmb/HgM2h42z1HGEcSWkWk5CgAjDDpQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-grill-salmon-2216658-hero-01-a9c948f8a238400ebaafc0caf509c7fa.jpg"
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "name": "Steak Frites",
       "description": "Tender steak served with crispy French fries and garlic butter sauce.",
       "price": "$22.50",
-      "image": "images/steak-frites.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWrikt8_BeavgThRkjPk0xlSy0j1F_uqmoXg&s"
     }
   ]
 }
