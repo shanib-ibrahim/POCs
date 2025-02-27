@@ -11,6 +11,8 @@ body {
   align-items: center;
   gap: 2rem;
   background-color: #f1f5f8;
+  position: relative;
+  height: 100vh;
 }
 header {
   text-align: center;
@@ -52,4 +54,8 @@ header {
     text-decoration: none;
     color: #c6a166;
   }
+}
+footer {
+  position: absolute;
+  bottom: 0;
 }
