@@ -10,10 +10,11 @@ body {
   width: 100%;
 }
 .container {
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: grid;
   place-items: center;
+  width: 100%;
 }
 .video-container {
   position: absolute;
@@ -22,4 +23,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -2;
+}
+h1 {
+  color: #fff;
+  z-index: 1;
 }
