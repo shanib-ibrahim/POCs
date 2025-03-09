@@ -15,7 +15,7 @@ export default async function SliceSimulatorPage({
 
   return (
     <SliceSimulator background="" zIndex={10}>
-      <div className="max-h-[900-x]">
+      <div className="max-h-[800-x]">
         <SliceZone slices={slices} components={components} />
       </div>
     </SliceSimulator>
