@@ -1,7 +1,8 @@
+"use client";
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-
+import { Bounded } from "@/components/Bounded";
 /**
  * Props for `SkyDive`.
  */
@@ -12,12 +13,12 @@ export type SkyDiveProps = SliceComponentProps<Content.SkyDiveSlice>;
  */
 const SkyDive: FC<SkyDiveProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for sky_dive (variation: {slice.variation}) Slices
-    </section>
+      <h2 className="sr-only">{slice.primary.sentence}</h2>
+    </Bounded>
   );
 };
 
