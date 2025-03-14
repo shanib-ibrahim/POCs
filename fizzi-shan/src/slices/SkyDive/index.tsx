@@ -3,6 +3,8 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
+import Scene from "./Scene";
+import { View } from "@react-three/drei";
 /**
  * Props for `SkyDive`.
  */
@@ -18,6 +20,9 @@ const SkyDive: FC<SkyDiveProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <h2 className="sr-only">{slice.primary.sentence}</h2>
+      <View className="h-screen w-screen">
+        <Scene />
+      </View>
     </Bounded>
   );
 };
