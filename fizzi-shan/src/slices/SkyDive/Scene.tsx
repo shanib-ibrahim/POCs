@@ -62,6 +62,18 @@ function ThreeText({
   const material = new THREE.MeshLambertMaterial();
   const isDesktop = useMediaQuery("(min-width:950px", true);
   return words.map((word: string, wordIndex: number) => (
-    <Text key={`${wordIndex}-${word}`}>{word}</Text>
+    <Text
+      key={`${wordIndex}-${word}`}
+      scale={isDesktop ? 1 : 0.5}
+      color={color}
+      material={material}
+      font="/fonts/Alpino-Variable.woff"
+      fontWeight={900}
+      anchorX={"center"}
+      anchorY={"middle"}
+      characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ!,.?'"
+    >
+      {word}
+    </Text>
   ));
 }
