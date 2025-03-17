@@ -1,7 +1,6 @@
 "use client";
 
 import FloatingCan from "@/components/FloatingCan";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { Content } from "@prismicio/client";
 import {
   Cloud,
@@ -12,6 +11,12 @@ import {
 } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type SkyDiveProps = {
   sentence: string | null;
@@ -26,6 +31,40 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
   const cloudsRef = useRef<THREE.Group>(null);
   const wordsRef = useRef<THREE.Group>(null);
 
+  const ANGLE = 75 * (Math.PI / 180);
+
+  const getXPosition = (distance: number) => distance * Math.cos(ANGLE);
+  const getYPosition = (distance: number) => distance * Math.sin(ANGLE);
+
+  const getXYPosition = (distance: number) => ({
+    x: getXPosition(distance),
+    y: getYPosition(-1 * distance),
+  });
+
+  useGSAP(() => {
+    if (
+      !cloudsRef.current ||
+      !canRef.current ||
+      !wordsRef.current ||
+      !cloud1Ref.current ||
+      !cloud2Ref.current
+    )
+      return;
+
+    gsap.set(cloudsRef.current.position, { z: 10 });
+    gsap.set(canRef.current.position, { ...getXYPosition(-4) });
+    gsap.set(
+      wordsRef.current.children.map((word) => word.position),
+      { ...getXYPosition(7), z: 2 },
+    );
+    gsap.to(canRef.current.rotation, {
+      y: Math.PI * 2,
+      duration: 1.7,
+      repeat: -1,
+      ease: "none",
+    });
+  });
+
   return (
     <group ref={groupRef}>
       <group rotation={[0, 0, 0.5]}>
@@ -39,7 +78,7 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
       </Clouds>
 
       {/* Text */}
-      <group>
+      <group ref={wordsRef}>
         {sentence && <ThreeText sentence={sentence} color="#F97315" />}
       </group>
 
