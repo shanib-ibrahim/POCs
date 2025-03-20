@@ -120,7 +120,8 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
         ...getXYPositions(4),
         duration: 0.5,
         ease: "back.in(1.7)",
-      });
+      })
+      .to(cloudsRef.current.position, { z: 7, duration: 0.5 });
   });
 
   return (
@@ -132,7 +133,9 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
           rotationIntensity={0}
           floatIntensity={3}
           floatSpeed={3}
-        ></FloatingCan>
+        >
+          <pointLight intensity={30} color="#8C0413" decay={0.6} />
+        </FloatingCan>
       </group>
 
       {/* Clouds */}
