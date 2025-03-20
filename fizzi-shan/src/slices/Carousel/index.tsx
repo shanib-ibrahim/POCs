@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Content } from "@prismicio/client";
 import {
   PrismicRichText,
@@ -36,6 +36,13 @@ export type CarouselProps = SliceComponentProps<Content.CarouselSlice>;
  * Component for "Carousel" Slices.
  */
 const Carousel: FC<CarouselProps> = ({ slice }) => {
+  const [currentFlavorIndex, setCurrentFlavorIndex] = useState(0);
+
+  function changeFlavor(index: number) {
+    const nextIndex = (index + FLAVORS.length) % FLAVORS.length;
+    setCurrentFlavorIndex(nextIndex);
+  }
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -48,16 +55,44 @@ const Carousel: FC<CarouselProps> = ({ slice }) => {
       </h2>
       <div className="grid grid-cols-[auto,auto,auto] items-center">
         {/* left */}
+        <button
+          onClick={() => changeFlavor(currentFlavorIndex + 1)}
+          className="z-20"
+        >
+          Left
+        </button>
         {/* can */}
         <View className="aspect-square h-[70vmin] min-h-40">
           <Center position={[0, 0, 1.5]}>
-            <FloatingCan floatIntensity={0.3} rotationIntensity={1} />
+            <FloatingCan
+              floatIntensity={0.3}
+              rotationIntensity={1}
+              flavor={FLAVORS[currentFlavorIndex].flavor}
+            />
           </Center>
-          <Environment files="/hdr/lobby.hdr" />
+          <Environment
+            files="/hdr/lobby.hdr"
+            environmentIntensity={0.6}
+            environmentRotation={[0, 3, 0]}
+          />
+          <directionalLight intensity={6} position={[0, 1, 1]} />
         </View>
         {/* right */}
+        <button
+          onClick={() => changeFlavor(currentFlavorIndex - 1)}
+          className="z-20"
+        >
+          Right
+        </button>
       </div>
-      <PrismicRichText field={slice.primary.price_copy} />
+      <div className="text-area relative mx-auto text-center">
+        <div className="text-wrapper text-4xl font-medium">
+          <p>{FLAVORS[currentFlavorIndex].name}</p>
+        </div>
+        <div className="mt-2 text-2xl font-normal opacity-90">
+          <PrismicRichText field={slice.primary.price_copy} />
+        </div>
+      </div>
     </section>
   );
 };
